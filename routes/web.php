@@ -15,12 +15,13 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 Route::get('/beams', function(){
     return Inertia::render('Beams');
-});
+})->middleware('auth');
 
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
