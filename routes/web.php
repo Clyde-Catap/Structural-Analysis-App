@@ -15,6 +15,10 @@ use Inertia\Inertia;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/testingworld', function(){
+    return Inertia::render('Test');
+});
+
 
 Route::get('/beams', function(){
     return Inertia::render('Beams');
